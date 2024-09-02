@@ -8,9 +8,9 @@ set relativenumber
 
 
 " Establecer el tamaño de la indentación a 4 espacios (puedes cambiar el número según tus preferencias)
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Utilizar tabuladores en lugar de espacios
 set expandtab
