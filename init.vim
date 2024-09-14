@@ -54,7 +54,7 @@ colorscheme gruvbox-material
 
 "LSP configuracion
 lua << EOF
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.ts_ls.setup{}
 EOF
 
 "Prettier configuracin
