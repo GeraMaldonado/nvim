@@ -21,7 +21,7 @@ Dentro de neovim en modo comando
 ```
 
 ### Posible error con COC.NVIM
-Se debe ir a la dirección `~/.vim/pluggin/coc.nvim/`
+Se debe ir a la dirección `~/.vim/pluggen/coc.nvim/`
 ejecutar 
 
 ```
