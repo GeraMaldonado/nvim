@@ -1,3 +1,6 @@
+# Instalacion de Neovim
+https://github.com/neovim/neovim/blob/master/INSTALL.md
+
 # Configuracion de NeoVim en linux
 
 ### Ubicacion de init.vim
