@@ -1,5 +1,5 @@
 set number
-set mouse=a
+"set mouse=a
 syntax enable
 set showcmd
 set encoding=utf-8
@@ -16,6 +16,8 @@ set softtabstop=2
 set expandtab
 
 
+let g:lsp_typescript_server_path = '/home/owl/.nvm/versions/node/v22.11.0/bin/typescript-language-server'
+let mapleader = ","
 
 call plug#begin('~/.vim/plugged')
 
@@ -44,6 +46,18 @@ Plug 'scrooloose/nerdtree'
 
 "Iconos
 Plug 'ryanoasis/vim-devicons'
+
+
+"Plug para go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+"Plug para prisma
+Plug 'prisma/vim-prisma'
+
+"Plug para git
+Plug 'lewis6991/gitsigns.nvim'
+
+
 call plug#end()
 
 
@@ -74,6 +88,11 @@ nnoremap <silent><F3> :NERDTreeToggle<CR>
 "<-----------configuracion_de_COC------------->
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
+let g:coc_global_extensions = ['coc-tsserver']
+
+" Configuración para autocompletado y sugerencia de importaciones
+autocmd FileType javascript,typescript,json let b:coc_suggest_disable = 0
+
 " utf-8 byte sequence
 set encoding=utf-8
 " Some servers have issues with backup files, see #649
@@ -233,3 +252,21 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+"Git
+lua << EOF
+require('gitsigns').setup {
+  signs = {
+    add          = { text = '+' },
+    change       = { text = '~' },
+    delete       = { text = '-' },
+    topdelete    = { text = '^' },
+    changedelete = { text = '~' },
+  },
+  sign_priority = 6, -- Prioridad para coexistir con otros plugins
+  attach_to_untracked = true, -- Adjuntar archivos no rastreados
+  current_line_blame = true, -- Mostrar quién modificó cada línea
+}
+EOF
+
