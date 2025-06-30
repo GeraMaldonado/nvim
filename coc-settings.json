@@ -38,13 +38,9 @@
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": ["javascript", "typescript", "javascriptreact", "typescriptreact"],
 //  "eslint.enable": true,
-//  "eslint.autoFixOnSave": true,
-//  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 //  "eslint.options": {
 //    "overrideConfigFile": ".eslintrc.json"
 //  }
-
-
 
   "diagnostic.virtualText": true,
   "diagnostic.signs": true,
