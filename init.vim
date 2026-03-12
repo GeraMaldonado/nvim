@@ -6,13 +6,10 @@ set encoding=utf-8
 set showmatch
 set relativenumber
 
-
-" Establecer el tamaño de la indentación a 4 espacios (puedes cambiar el número según tus preferencias)
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
-" Utilizar tabuladores en lugar de espacios
 set expandtab
 
 
@@ -28,8 +25,6 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'neovim/nvim-lspconfig'
 "Plug 'nvim-lua/completion-nvim'
 Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
-
-
 
 "Plugins para javascript
 Plug 'pangloss/vim-javascript'
@@ -56,8 +51,6 @@ Plug 'prisma/vim-prisma'
 
 "Plug para git
 Plug 'lewis6991/gitsigns.nvim'
-
-
 call plug#end()
 
 
@@ -68,7 +61,8 @@ colorscheme gruvbox-material
 
 "LSP configuracion
 lua << EOF
-require'lspconfig'.ts_ls.setup{}
+vim.lsp.config('tsserver', {})
+vim.lsp.enable('tsserver')
 EOF
 
 "Prettier configuracin
