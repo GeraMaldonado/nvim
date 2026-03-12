@@ -12,7 +12,6 @@ set softtabstop=2
 
 set expandtab
 
-
 let g:lsp_typescript_server_path = '/home/owl/.nvm/versions/node/v22.11.0/bin/typescript-language-server'
 let mapleader = ","
 
@@ -55,9 +54,15 @@ call plug#end()
 
 
 "Gruvbox configuracion
-set background=dark
+"set background=dark
 let g:gruvbox_material_background='medium'
 colorscheme gruvbox-material
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NormalNC guibg=NONE ctermbg=NONE
+highlight EndOfBuffer guibg=NONE ctermbg=NONE
+highlight SignColumn guibg=NONE ctermbg=NONE
+
+
 
 "LSP configuracion
 lua << EOF
