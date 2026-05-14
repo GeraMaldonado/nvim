@@ -50,8 +50,16 @@ Plug 'prisma/vim-prisma'
 
 "Plug para git
 Plug 'lewis6991/gitsigns.nvim'
+
+"Plug para latex
+Plug 'lervag/vimtex'
 call plug#end()
 
+"Configuraicon vimtex
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 
 "Gruvbox configuracion
 "set background=dark
